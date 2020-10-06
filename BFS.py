@@ -60,7 +60,7 @@ class Graph:
                     queue.put(neighbour)
         print(bfs_trav_output)  
         print(parent[3])    
-        print(distance[3])  
+        print(distance[0])  
   
 # Driver code 
   
