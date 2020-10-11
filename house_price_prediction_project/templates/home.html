@@ -1,5 +1,42 @@
 {% extends 'base/base.html' %}
 
 {% block body %}
-<h1>This is ayan</h1>
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://lh3.googleusercontent.com/proxy/T6-rSb_EYNmtFav0qaiPYkeo2gGTjAKElf1r0u_8n8s0EaAZD7UepDpSBplt-L9Fn_VMdnw4exdZc9wjPMTgEIBFBfYG5Wb0Vok" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Los Angeles</h3>
+        <p>We had such a great time in LA!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/originals/fa/77/09/fa7709baf361b6986e4b199b6dbfff22.jpg" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.mortgageforces.ca/wp-content/uploads/2019/08/newhome.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>New York</h3>
+        <p>We love the Big Apple!</p>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<h1>This is Home</h1>
 {% endblock body %}

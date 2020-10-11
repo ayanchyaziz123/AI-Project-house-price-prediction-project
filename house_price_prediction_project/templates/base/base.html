@@ -9,17 +9,202 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+
+  .slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4c87af;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4c87af;
+  cursor: pointer;
+}
+
+  </style>
 </head>
 <body>
 
+<!--navbar starting-->
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  </div>
+</nav>
+
+<!--navbar end-->
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+    <div class="col sm-4">
+    <h1>Ayan is Here</h1>
+    </div>
+    <div class="col sm-4">
+    <h1>Ayan is Here</h1>
+    </div>
+    <div class="col sm-4 text-center">
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+  Predic A Home
+</button>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-info">
+        <h4 class="modal-title text-white">Modal Heading</h4>
+        <button type="button bg-white" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+      <div class="form-group">
+    <label for="exampleInputEmail1">Area (Squre Feet)</label>
+    <div class="slidecontainer">
+  <input type="range" min="1" max="20000" value="2" class="slider" id="myRange">
+  <p>Value: <span id="demoo"></span></p>
+</div>
+  </div>
+
+
+
+      <div class="form-group">
+    <label for="exampleFormControlSelect1">Window</label><br>
+   
+        <div class="form-check-inline">
+      <label class="form-check-label" for="radio1">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>1
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">2
+      </label>
+    </div>
+
+  </div>
+
+     <div class="form-group">
+    <label for="exampleFormControlSelect1">BHK</label><br>
+   
+        <div class="form-check-inline">
+      <label class="form-check-label" for="radio1">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>1
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">2
+      </label>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Location</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Sylhet</option>
+      <option>Dhaka</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+        
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 <div class="container mt-5 mb-5">
      {% block body %}
      {% endblock body %}
 
 
+</div>
+     
 
-     <div style="margin-top:300px">
+     <script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demoo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+
 
 </body>
 </html>
