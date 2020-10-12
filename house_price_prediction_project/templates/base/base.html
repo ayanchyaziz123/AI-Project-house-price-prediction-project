@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -133,15 +134,16 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class="row">
-    <div class="col sm-4">
-    <h1>Ayan is Here</h1>
+    <div class="col-12 col-sm-12 col-md-4 text-center mb-col-5 mb-col-sm-5">
+    <img src="{% static 'logo.jpg' %}" class="img-fluid rounded-circle" width="204">
     </div>
-    <div class="col sm-4">
-    <h1>Ayan is Here</h1>
+    <div class="col-12 col-sm-12 col-md-4 text-center">
+    <h3>Note : </h3>
+    <p>This is our website Where you will predict any home price</p>
     </div>
-    <div class="col sm-4 text-center">
+    <div class="col-12 col-sm-12 col-md-4 text-center">
     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
-  Predic A Home
+  Predic A House Price
 </button>
     </div>
     </div>
