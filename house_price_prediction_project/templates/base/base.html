@@ -5,6 +5,7 @@
 <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/Team-Boxed.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    
   <style>
 
   .slidecontainer {
@@ -107,23 +109,21 @@
 <body>
 
 <!--navbar starting-->
-
-<nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-search fixed-top pt-2 pb-2">
         <div class="container"><a class="navbar-brand" href="#">ATA</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Link 1</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Link 3</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'aboutUs' %}">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'contactUs' %}">Contact Us</a></li>
                 </ul>
                 <form class="form-inline mr-auto" target="_self">
                     <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
-                </form><a class="btn btn-light action-button" role="button" href="#">Action </a></div>
+                </form><a class="btn btn-light action-button" role="button" href="#">Log In </a></div>
         </div>
-    </nav>
+</nav>
 
 <!--navbar end-->
 
@@ -138,7 +138,7 @@
     <p>This is our website Where you will predict any home price</p>
     </div>
     <div class="col-12 col-sm-12 col-md-4 text-center">
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
   Predic A House Price
 </button>
     </div>
@@ -235,127 +235,7 @@
       
 
 
-    <div class="projects-horizontal">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Projects </h2>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
-            </div>
-            <div class="row projects">
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="{% static 'assets/img/desk.jpg' %}"></a></div>
-                        <div class="col">
-                            <h3 class="name">Project Name</h3>
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="{% static 'assets/img/building.jpg' %}"></a></div>
-                        <div class="col">
-                            <h3 class="name">Project Name</h3>
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="{% static 'assets/img/loft.jpg' %}"></a></div>
-                        <div class="col">
-                            <h3 class="name">Project Name</h3>
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="{% static 'assets/img/minibus.jpeg' %}"></a></div>
-                        <div class="col">
-                            <h3 class="name">Project Name</h3>
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="features-boxed">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Features </h2>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
-            </div>
-            <div class="row justify-content-center features">
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="box"><i class="fa fa-map-marker icon"></i>
-                        <h3 class="name">Works everywhere</h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a class="learn-more" href="#">Learn more »</a></div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="box"><i class="fa fa-clock-o icon"></i>
-                        <h3 class="name">Always available</h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a class="learn-more" href="#">Learn more »</a></div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="box"><i class="fa fa-list-alt icon"></i>
-                        <h3 class="name">Customizable </h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a class="learn-more" href="#">Learn more »</a></div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="box"><i class="fa fa-leaf icon"></i>
-                        <h3 class="name">Organic </h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a class="learn-more" href="#">Learn more »</a></div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="box"><i class="fa fa-plane icon"></i>
-                        <h3 class="name">Fast </h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a class="learn-more" href="#">Learn more »</a></div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="box"><i class="fa fa-phone icon"></i>
-                        <h3 class="name">Mobile-first</h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a class="learn-more" href="#">Learn more »</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="team-boxed">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Team </h2>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
-            </div>
-            <div class="row people">
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="{% static 'assets/img/1.jpg' %}">
-                        <h3 class="name">Ben Johnson</h3>
-                        <p class="title">Musician</p>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="{% static 'assets/img/2.jpg' %}">
-                        <h3 class="name">Emily Clark</h3>
-                        <p class="title">Artist</p>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="{% static 'assets/img/3.jpg' %}">
-                        <h3 class="name">Carl Kent</h3>
-                        <p class="title">Stylist</p>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <div class="footer-dark">
         <footer>
             <div class="container">
