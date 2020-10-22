@@ -1,63 +1,161 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block body %}
 
   <main class="page pricing-table-page">
-        <section class="clean-block clean-pricing dark">
-            <div class="container">
-                <div class="block-heading">
-                    <h2 class="text-info">Pricing Table</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-5 col-lg-4">
-                        <div class="clean-pricing-item">
-                            <div class="heading">
-                                <h3>BASIC</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <div class="features">
-                                <h4><span class="feature">Full Support:&nbsp;</span><span>No</span></h4>
-                                <h4><span class="feature">Duration:&nbsp;</span><span>30 Days</span></h4>
-                                <h4><span class="feature">Storage:&nbsp;</span><span>10GB</span></h4>
-                            </div>
-                            <div class="price">
-                                <h4>$25</h4>
-                            </div><button class="btn btn-outline-primary btn-block" type="button">BUY NOW</button></div>
-                    </div>
-                    <div class="col-md-5 col-lg-4">
-                        <div class="clean-pricing-item">
-                            <div class="ribbon"><span>Best Value</span></div>
-                            <div class="heading">
-                                <h3>PRO</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <div class="features">
-                                <h4><span class="feature">Full Support:&nbsp;</span><span>Yes</span></h4>
-                                <h4><span class="feature">Duration:&nbsp;</span><span>60 Days</span></h4>
-                                <h4><span class="feature">Storage:&nbsp;</span><span>50GB</span></h4>
-                            </div>
-                            <div class="price">
-                                <h4>$50</h4>
-                            </div><button class="btn btn-primary btn-block" type="button">BUY NOW</button></div>
-                    </div>
-                    <div class="col-md-5 col-lg-4">
-                        <div class="clean-pricing-item">
-                            <div class="heading">
-                                <h3>PREMIUM</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <div class="features">
-                                <h4><span class="feature">Full Support:&nbsp;</span><span>Yes</span></h4>
-                                <h4><span class="feature">Duration:&nbsp;</span><span>120 Days</span></h4>
-                                <h4><span class="feature">Storage:&nbsp;</span><span>150GB</span></h4>
-                            </div>
-                            <div class="price">
-                                <h4>$150</h4>
-                            </div><button class="btn btn-outline-primary btn-block" type="button">BUY NOW</button></div>
-                    </div>
-                </div>
+  <h2 class="text-center mt-5 mb-5">Home</h2>
+  <section class="mt-5 mb-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-3">
+          <div class="card shadow">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
             </div>
-        </section>
+            <div class="card-body text-center">
+              <h5>Title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card shadow">
+            <a href="#">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+            </a>
+            <div class="card-body text-center">
+              <h5>Title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card shadow">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5>Title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card shadow">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5>Title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-5">
+          <div class="card shadow">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5>Title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-5">
+          <div class="card shadow">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5>Title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-5">
+          <div class="card shadow">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5>Title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-5">
+          <div class="card shadow">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5>Title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
     </main>
 
 
