@@ -1,0 +1,367 @@
+{% extends 'base.html' %} {% load static %} {% block body %}
+
+<main class="page landing-page">
+  <section
+    class="clean-block clean-hero"
+    style="
+      background-image: url('static/assets/img/tech/home.jpg');
+      color: rgba(9, 162, 255, 0.85);
+    "
+  >
+    <div class="text">
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna,
+        dignissim nec auctor in, mattis vitae leo.
+      </p>
+      <button
+        class="btn btn-outline-light btn-lg"
+        type="button"
+        data-toggle="modal"
+        data-target="#myModal"
+      >
+        Predict A home Price
+      </button>
+    </div>
+  </section>
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header bg-info">
+          <h4 class="modal-title text-white">Predict A House Price</h4>
+          <button type="button bg-white" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Area (Squre Feet)</label>
+            <div class="slidecontainer">
+              <input
+                type="range"
+                min="1"
+                max="20000"
+                value="2"
+                class="slider"
+                id="myRange"
+              />
+              <p>Value: <span id="demoo"></span></p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">BHK</label><br />
+            <div class="switch-field">
+              <input type="radio" id="radio-bhk-1" name="uiBHK" value="1" />
+              <label for="radio-bhk-1">1</label>
+              <input
+                type="radio"
+                id="radio-bhk-2"
+                name="uiBHK"
+                value="2"
+                checked
+              />
+              <label for="radio-bhk-2">2</label>
+              <input type="radio" id="radio-bhk-3" name="uiBHK" value="3" />
+              <label for="radio-bhk-3">3</label>
+              <input type="radio" id="radio-bhk-4" name="uiBHK" value="4" />
+              <label for="radio-bhk-4">4</label>
+              <input type="radio" id="radio-bhk-5" name="uiBHK" value="5" />
+              <label for="radio-bhk-5">5</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Bath</label><br />
+            <div class="switch-field">
+              <input
+                type="radio"
+                id="radio-bath-1"
+                name="uiBathrooms"
+                value="1"
+              />
+              <label for="radio-bath-1">1</label>
+              <input
+                type="radio"
+                id="radio-bath-2"
+                name="uiBathrooms"
+                value="2"
+                checked
+              />
+              <label for="radio-bath-2">2</label>
+              <input
+                type="radio"
+                id="radio-bath-3"
+                name="uiBathrooms"
+                value="3"
+              />
+              <label for="radio-bath-3">3</label>
+              <input
+                type="radio"
+                id="radio-bath-4"
+                name="uiBathrooms"
+                value="4"
+              />
+              <label for="radio-bath-4">4</label>
+              <input
+                type="radio"
+                id="radio-bath-5"
+                name="uiBathrooms"
+                value="5"
+              />
+              <label for="radio-bath-5">5</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Location</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>Tilagor</option>
+              <option>Majortila</option>
+              <option>Shaporan</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="text-center mt-5 mb-5">Home</h2>
+  <section class="mt-5 mb-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-3">
+          <div class="card shadow">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card shadow">
+             <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card shadow">
+             <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card shadow">
+             <div class="inner">
+              <img
+                class="card-img-top"
+                src="{% static 'assets/img/tech/home2.jpg' %}"
+                alt="Card image cap"
+              />   
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="clean-block clean-info dark">
+    <div class="container">
+      <div class="block-heading">
+        <h2 class="text-info">Info</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+          urna, dignissim nec auctor in, mattis vitae leo.
+        </p>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img
+            class="img-thumbnail"
+            src="{% static 'assets/img/tech/home2.jpg' %}"
+          />
+        </div>
+        <div class="col-md-6">
+          <h3>Lorem impsum dolor sit amet</h3>
+          <div class="getting-started-info">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <button class="btn btn-outline-primary btn-lg" type="button">
+            Join Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="clean-block features">
+    <div class="container">
+      <div class="block-heading">
+        <h2 class="text-info">Features</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+          urna, dignissim nec auctor in, mattis vitae leo.
+        </p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-5 feature-box">
+          <i class="icon-star icon"></i>
+          <h4>Bootstrap 4</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+            urna, dignissim nec auctor in, mattis vitae leo.
+          </p>
+        </div>
+        <div class="col-md-5 feature-box">
+          <i class="icon-pencil icon"></i>
+          <h4>Customizable</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+            urna, dignissim nec auctor in, mattis vitae leo.
+          </p>
+        </div>
+        <div class="col-md-5 feature-box">
+          <i class="icon-screen-smartphone icon"></i>
+          <h4>Responsive</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+            urna, dignissim nec auctor in, mattis vitae leo.
+          </p>
+        </div>
+        <div class="col-md-5 feature-box">
+          <i class="icon-refresh icon"></i>
+          <h4>All Browser Compatibility</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+            urna, dignissim nec auctor in, mattis vitae leo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clean-block about-us">
+    <div class="container">
+      <div class="block-heading">
+        <h2 class="text-info">Our Team</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+          urna, dignissim nec auctor in, mattis vitae leo.
+        </p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-6 col-lg-4">
+          <div class="card clean-card text-center">
+            <img
+              class="card-img-top w-100 d-block"
+              src="{% static 'aya.jpeg' %}"
+            />
+            <div class="card-body info">
+              <h4 class="card-title">Azizur Rhman Ayan</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div class="icons">
+                <a href="#"><i class="icon-social-facebook"></i></a
+                ><a href="#"><i class="icon-social-instagram"></i></a
+                ><a href="#"><i class="icon-social-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card clean-card text-center">
+            <img
+              class="card-img-top w-100 d-block"
+              src="{% static 'tasnu.jpg' %}"
+            />
+            <div class="card-body info">
+              <h4 class="card-title">Tasnuba Islam</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div class="icons">
+                <a href="#"><i class="icon-social-facebook"></i></a
+                ><a href="#"><i class="icon-social-instagram"></i></a
+                ><a href="#"><i class="icon-social-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="card clean-card text-center">
+            <img
+              class="card-img-top w-100 d-block"
+              src="{% static 'an.jpg' %}"
+            />
+            <div class="card-body info">
+              <h4 class="card-title">Ankhi</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div class="icons">
+                <a href="#"><i class="icon-social-facebook"></i></a
+                ><a href="#"><i class="icon-social-instagram"></i></a
+                ><a href="#"><i class="icon-social-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock body %}
