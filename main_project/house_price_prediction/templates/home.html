@@ -158,13 +158,16 @@
                   class="card-img-top"
                   src="{{house.house_image.url}}"
                   alt="Card image cap"
-                />
+                 style="max-height: 130px;"/>
               </div>
             </a>
             <div class="card-body text-center">
-              <h5>{{house.house_title |truncatewords:3}}</h5>
+              <h5>{{house.house_title |truncatewords:2}}</h5>
               <p class="card-text">
-                {{house.house_descriptions |truncatewords:20}}
+                {{house.house_descriptions |truncatewords:10}}
+              <a href="#">
+              more
+              </a>
               </p>
             </div>
           </div>
