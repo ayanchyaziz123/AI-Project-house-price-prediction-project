@@ -138,84 +138,39 @@
       </div>
     </div>
   </div>
+
+  
+
+  <!-- The Modal -->
+  
+
   <h2 class="text-center mt-5 mb-5">Home</h2>
   <section class="mt-5 mb-5">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-sm-3">
-          <div class="card shadow">
-            <div class="inner">
-              <img
-                class="card-img-top"
-                src="{% static 'assets/img/tech/home2.jpg' %}"
-                alt="Card image cap"
-              />
-            </div>
-            <div class="card-body text-center">
-              <h5>Title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
+      {% for house in house %}
+      
+      <div class="col-sm-3">
           <div class="card shadow">
             <a href="#">
-            <div class="inner">
-              <img
-                class="card-img-top"
-                src="{% static 'assets/img/tech/home2.jpg' %}"
-                alt="Card image cap"
-              />
-            </div>
+              <div class="inner">
+                <img
+                  class="card-img-top"
+                  src="{{house.house_image.url}}"
+                  alt="Card image cap"
+                />
+              </div>
             </a>
             <div class="card-body text-center">
-              <h5>Title</h5>
+              <h5>{{house.house_title}}</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                {{house.house_descriptions}}
               </p>
             </div>
           </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card shadow">
-            <div class="inner">
-              <img
-                class="card-img-top"
-                src="{% static 'assets/img/tech/home2.jpg' %}"
-                alt="Card image cap"
-              />
-            </div>
-            <div class="card-body text-center">
-              <h5>Title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
           </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card shadow">
-            <div class="inner">
-              <img
-                class="card-img-top"
-                src="{% static 'assets/img/tech/home2.jpg' %}"
-                alt="Card image cap"
-              />
-            </div>
-            <div class="card-body text-center">
-              <h5>Title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
+      {% endfor %}
+  
       </div>
     </div>
   </section>
