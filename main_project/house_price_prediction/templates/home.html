@@ -162,9 +162,9 @@
               </div>
             </a>
             <div class="card-body text-center">
-              <h5>{{house.house_title}}</h5>
+              <h5>{{house.house_title |truncatewords:3}}</h5>
               <p class="card-text">
-                {{house.house_descriptions}}
+                {{house.house_descriptions |truncatewords:20}}
               </p>
             </div>
           </div>
@@ -307,7 +307,7 @@
               src="{% static 'an.jpg' %}"
             />
             <div class="card-body info">
-              <h4 class="card-title">Ankhi</h4>
+              <h4 class="card-title">Shayla Shobnom Ankhi</h4>
               <p class="card-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               </p>
