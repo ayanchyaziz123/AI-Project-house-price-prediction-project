@@ -9,10 +9,10 @@
     "
   >
     <div class="text">
-      <h2>Lorem ipsum dolor sit amet.</h2>
+      <h2>ATA house price prediction</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna,
-        dignissim nec auctor in, mattis vitae leo.
+        You can predict any house price through this app and you can purchase home
+         through this app.
       </p>
       <button
         class="btn btn-outline-light btn-lg"
@@ -144,34 +144,37 @@
   <!-- The Modal -->
   
 
-  <h2 class="text-center mt-5 mb-5">Home</h2>
+  <h2 class="text-center mt-5 mb-5">Recent Houses</h2>
   <section class="mt-5 mb-5">
     <div class="container">
       <div class="row justify-content-center">
       {% for house in house %}
       
-      <div class="col-sm-3">
+       <div class="col-sm-3 mt-5">
           <div class="card shadow">
-            <a href="#">
-              <div class="inner">
-                <img
-                  class="card-img-top"
-                  src="{{house.house_image.url}}"
-                  alt="Card image cap"
-                 style="max-height: 130px;"/>
-              </div>
+            <a href="{% url 'readMore' house.houseId%}">
+            <div class="inner">
+              <img
+                class="card-img-top"
+                src="{{house.house_image.url}}"
+                alt="Card image cap"
+              style="max-height: 130px;" />
+            </div>
             </a>
+            <a href="{% url 'readMore' house.houseId%}" id="a-remove">
             <div class="card-body text-center">
               <h5>{{house.house_title |truncatewords:2}}</h5>
-              <p class="card-text">
+              <p class="card-text fn-size">
                 {{house.house_descriptions |truncatewords:10}}
-              <a href="#">
-              more
+                more
+              </p>
               </a>
+              <p>&#x09F3;
+              {{house.price}}
               </p>
             </div>
           </div>
-          </div>
+        </div>
       {% endfor %}
   
       </div>
@@ -274,7 +277,10 @@
             <div class="card-body info">
               <h4 class="card-title">Azizur Rhman Ayan</h4>
               <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                student of metropolitan university
+              </p>
+               <p class="card-text">
+                ID : 181-115-086
               </p>
               <div class="icons">
                 <a href="#"><i class="icon-social-facebook"></i></a
@@ -288,12 +294,15 @@
           <div class="card clean-card text-center">
             <img
               class="card-img-top w-100 d-block"
-              src="{% static 'tasnu.jpg' %}"
+              src="{% static 'tasnu.JPG' %}"
             />
             <div class="card-body info">
               <h4 class="card-title">Tasnuba Islam</h4>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+               <p class="card-text">
+                student of metropolitan university
+              </p>
+               <p class="card-text">
+                ID : 181-115-105
               </p>
               <div class="icons">
                 <a href="#"><i class="icon-social-facebook"></i></a
@@ -311,8 +320,11 @@
             />
             <div class="card-body info">
               <h4 class="card-title">Shayla Shobnom Ankhi</h4>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+               <p class="card-text">
+                student of metropolitan university
+              </p>
+               <p class="card-text">
+                ID : 181-115-093
               </p>
               <div class="icons">
                 <a href="#"><i class="icon-social-facebook"></i></a

@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% load static %} {% block body %}
+
+<main class="page pricing-table-page">
+  <h2 class="text-center mt-5 mb-5">Home</h2>
+  <section class="mt-5 mb-5">
+    <div class="container">
+    <div class="row">
+    
+    <div class="col-sm-6 mb-5">
+    <div class="inner">
+    <img src="{{house.house_image.url}}" class="img-fluid">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <h3>{{house.house_title}}</h3>
+    <p>{{house.house_descriptions}}</p>
+    <p>Location : <i class="fa fa-map-marker" aria-hidden="true"></i> {{house.location}}</p>
+    <p>Price : &#x09F3; {{house.price}}</p>
+    <p>Area : {{house.total_sqrft}} srft</p>
+    <p>bathroom : {{house.bathroom}}</p>
+    <p>balcony : {{house.balcony}}</p>
+    <p>Availability : {{house.availability}}</p>
+    <a href="#" class="btn btn-info">Purchase<a/>
+    </div>
+
+    <div>
+    </div>
+  </section>
+</main>
+
+{% endblock body %}

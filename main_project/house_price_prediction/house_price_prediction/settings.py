@@ -25,7 +25,7 @@ SECRET_KEY = '51ws&5__!8@f4(rnznpiu-0dfl3cit!b46n!*j52s&5mg3uc%e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ata-house-price-predictions.herokuapp.com','127.0.0.1']
 
 
 # Application definition

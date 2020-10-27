@@ -5,10 +5,16 @@ from django.db.models.expressions import Case
 # Create your models here.
 class Location(models.Model):
     location = models.CharField(primary_key=True, max_length=200)
+    def __str__(self):
+        return self.location
 class Society(models.Model):
     society = models.CharField(primary_key=True, max_length=200)
+    def __str__(self):
+        return self.society
 class Area(models.Model):
     areaType = models.CharField(primary_key=True, max_length=200)
+    def __str__(self):
+        return self.areaType
 class House(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     society = models.ForeignKey(Society, on_delete=models.CASCADE)
