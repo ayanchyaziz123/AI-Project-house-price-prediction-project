@@ -16,11 +16,11 @@ def contactUs(request):
 def aboutUs(request):
     return render(request, 'aboutUs.html') 
 def houses(request):
-    house = House.objects.all().order_by('-post_creatDate')
-    paginator = Paginator(house, 4)
+    Post = House.objects.all().order_by('-post_creatDate')
+    paginator = Paginator(Post, 4)
     page = request.GET.get('page')
     context = {
-        'house':house
+        'Posts':Post
     }
     return render(request, 'houses.html', context)    
 def readMore(request, slug):
